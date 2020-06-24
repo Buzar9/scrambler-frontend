@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "name": "sylabic",
+      "text": "Klucz szyfru sylabicznego musi posiadać sylaby dwuliterowe. Szyfrowanie polega na zamianie występującej w wiadomości litery na jej sąsiadkę ze sylaby. Najpopularniejszym jest Gadery Poluki.  Możesz wpisać swój własny szyfr w polę 'key'. Nie używaj znaków interpunkcyjnych."
+    },
+    {
+      "name": "pangram",
+      "text": "Pangram to zdanie wykorzystujące wszystkie litery polskiego alfabetu. Zgodnie z jego szykiem przypisuje się kolejno liczby od 1 do 32 reprezentujące każdą literę. Są różne pangramy, dlatego możesz wpisać swój własny w polę 'key'. Uważaj na znaki interpunkcyjne. Liczby należy oddzielać spacją, szyfrowanie nie rozpoznaje przerw między słowami."
+    },
+    {
+      "name": "mors",
+      "text": "Alfabet Morsa to sposób zapisu alfabetu za pomocą sygnałów którkiego (*) i długiego (-). Aplikacja nie obsługuje polskich znaków i cyfr."
+    }
+  ]
+}
