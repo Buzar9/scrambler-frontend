@@ -2,15 +2,18 @@
   "items": [
     {
       "name": "sylabic",
-      "text": "Klucz szyfru sylabicznego musi posiadać sylaby dwuliterowe. Szyfrowanie polega na zamianie występującej w wiadomości litery na jej sąsiadkę ze sylaby. Najpopularniejszym jest Gadery Poluki.  Możesz wpisać swój własny szyfr w polę 'key'. Nie używaj znaków interpunkcyjnych."
+      "text": "Klucz szyfru sylabicznego podzielony jest na dwuliterowe sylaby. Szyfrowanie polega na zamianie litery z wiadomości na jej partnęrkę w sylabie. W GADER POLUKI zamienią się G na A.",
+      "instruction": "Możesz wpisać własny szyfr w pole 'key'. Nie używaj znaków interpunkcyjnych"
     },
     {
       "name": "pangram",
-      "text": "Pangram to zdanie wykorzystujące wszystkie litery polskiego alfabetu. Zgodnie z jego szykiem przypisuje się kolejno liczby od 1 do 32 reprezentujące każdą literę. Są różne pangramy, dlatego możesz wpisać swój własny w polę 'key'. Uważaj na znaki interpunkcyjne. Liczby należy oddzielać spacją, szyfrowanie nie rozpoznaje przerw między słowami."
+      "text" : "Pangram to zdanie wykorzystujące wszystkie litery polskiego alfabetu z wyjątkiem X. Zgodnie z szykiem zdania każdej literze kolejno przydzielana jest liczba od 1 do 32",
+      "instruction": "Istnieje wiele pangramów, dlatego możesz wpisać swój własny w polę 'key'. Uważaj na znaki interpunkcyjne. Liczby należy oddzielać spacją. Szyfrowanie nie rozpoznaje przerw między śłowami"
     },
     {
       "name": "mors",
-      "text": "Alfabet Morsa to sposób zapisu alfabetu za pomocą sygnałów którkiego (*) i długiego (-). Aplikacja nie obsługuje polskich znaków i cyfr."
+      "text": "Alfabet Morsa to sposób zapisu alfabetu za pomocą sygnałów którkiego (*) i długiego (-).",
+      "instruction": "Każdą wiadomość w alfabecie Morsa rozpocznij i zakończ '///'. Do rozdzielania liter użyj '/', do słów '//'. Aplikacja nie obsługuje znaków specjalnych i cyfr."
     }
   ]
 }
