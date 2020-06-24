@@ -21,8 +21,8 @@ class MorsPage extends React.Component {
                 <h1> MORS </h1>
                 {items
                     .filter((item) => item.name === cipher)
-                    .map(({text}) =>
-                        <MorsCipher text={text} />
+                    .map(({ text, instruction }) =>
+                        <MorsCipher text={text} instruction={instruction} />
                     )}
             </div>
         );

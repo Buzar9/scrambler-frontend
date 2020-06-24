@@ -69,7 +69,7 @@ class MorsCipher extends React.Component {
                     <label>PASSWORD: {this.state.password}</label>
                 </div>
                 <div style={{'display': this.state.show ? 'block' : 'none'}}>
-                    <InfoDropdown show={this.state.show} text={this.props.text}/>
+                    <InfoDropdown show={this.state.show} text={this.props.text} instruction={this.props.instruction}/>
                 </div>
             </div>
         )

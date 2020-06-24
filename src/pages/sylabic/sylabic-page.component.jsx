@@ -23,8 +23,8 @@ class SylabicPage extends React.Component {
                 <h1> SYLABIC </h1>
                 {items
                     .filter((item) => item.name === cipher)
-                    .map(({text}) =>
-                        <CustomCipher url={url} text={text}/>
+                    .map(({ text, instruction }) =>
+                        <CustomCipher url={url} text={text} instruction={instruction}/>
                     )}
             </div>
         )
