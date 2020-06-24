@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Switch, Route } from 'react-router-dom'
+
+import Header from "./components/header/header.component";
+import HomePage from "./pages/homepage/homepage.component";
+import MorsPage from "./pages/mors/mors-page.component";
+import PangramPage from "./pages/pangram/pangram-page.component";
+import SylabicPage from "./pages/sylabic/sylabic-page.component";
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            cipher: null
+        }
+    }
+
+    render() {
+        return(
+            <div>
+                <Header />
+                <Switch>
+                    <Route exact path='/' component={HomePage} />
+                    <Route path='/pangram' component={PangramPage} /> />
+                    <Route path='/mors' component={MorsPage} />
+                    <Route path='/sylabic' component={SylabicPage} />
+                </Switch>
+            </div>
+        )
+    }
 }
 
 export default App;
