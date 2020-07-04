@@ -80,9 +80,9 @@ class Cipher extends React.Component {
                         required
                     />
                     <div className='button-group'>
-                        <Button type='submit'> ENCRYPT! </Button>
-                        <Button onClick={this.resetAll}> RESET </Button>
-                        <Button onClick={this.handleInfo}> INFO </Button>
+                        <Button className='custom-button' type='submit'> ENCRYPT! </Button>
+                        <Button className='custom-button' onClick={this.resetAll}> RESET </Button>
+                        <Button className='custom-button' onClick={this.handleInfo}> INFO </Button>
                     </div>
                 </form>
                 <>

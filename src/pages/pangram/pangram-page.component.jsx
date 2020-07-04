@@ -9,15 +9,17 @@ import {items} from "../../const/info.data.json";
 const cipher = 'pangram';
 const PangramPage = () => (
 
-    <div className="page-body">
-        <h1> PANGRAM </h1>
-        <>
-            {items
-                .filter((item) => item.name === cipher)
-                .map(({text, instruction}) =>
-                    <Cipher url={PANGRAM_URL} text={text} instruction={instruction} cipher={cipher} />
-                )}
-        </>
+    <div class="all">
+        <div className="page">
+            <h1> PANGRAM </h1>
+            <>
+                {items
+                    .filter((item) => item.name === cipher)
+                    .map(({text, instruction}) =>
+                        <Cipher url={PANGRAM_URL} text={text} instruction={instruction} cipher={cipher}/>
+                    )}
+            </>
+        </div>
     </div>
 )
 

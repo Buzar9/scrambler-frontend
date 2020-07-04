@@ -5,10 +5,23 @@
   padding: 10px;
   width: auto;
   border-radius: 5px;
+  color: yellow;
 }
 
 .button-group {
   padding: 10px 0 15px 0;
-  grid-auto-columns: auto;
-  grid-column-gap: 200px;
+  display: flex;
+  column-gap: 10px;
+  alignment: center;
+  justify-content: center;
+
+  .custom-button {
+    cursor: pointer;
+    padding: 1px 15px 1px 15px;
+    background-color: crimson;
+    border: none;
+    border-radius: 5px;
+    max-width: 33%;
+    color: lawngreen;
+  }
 }

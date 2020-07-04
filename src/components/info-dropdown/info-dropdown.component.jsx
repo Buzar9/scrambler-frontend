@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './info-dropdown.styles.scss'
+import Button from "../button/button.component";
 
 const InfoDropdown = ({ show, text, instruction }) => (
     <div className={show ? 'info-dropdown' : null}>

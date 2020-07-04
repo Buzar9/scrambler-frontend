@@ -5,10 +5,10 @@ import './header.syles.scss';
 
 const Header = () => (
     <div className='header'>
-        <Link className='logo-container' to='/'>
+        <Link className='home' to='/'>
             HOME
         </Link>
-        <div className='options'>
+        <div className='option-group'>
             <Link className='option' to='/pangram'>
                 PANGRAM
             </Link>
