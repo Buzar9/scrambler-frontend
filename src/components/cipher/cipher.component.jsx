@@ -38,7 +38,7 @@ class Cipher extends React.Component {
 
         axios.post(this.props.url, inMessage)
             .then(response => {
-                if(response.data != null) {
+                if (response.data != null) {
                     this.setState({
                         password: response.data.password
                     });
@@ -54,23 +54,23 @@ class Cipher extends React.Component {
 
     handleInfo = event => {
         event.preventDefault();
-        this.setState({'show' : !this.state.show});
+        this.setState({'show': !this.state.show});
     }
 
     render() {
-        return(
+        return (
             <div className='cipher-body'>
                 <form onSubmit={this.submitCipher}>
                     {this.props.cipher !== 'mors' ?
-                    <FormInput
-                        name='key'
-                        type='key'
-                        value={this.state.key}
-                        handleChange={this.handleChange}
-                        label='key'
-                        required
-                    />
-                : null}
+                        <FormInput
+                            name='key'
+                            type='key'
+                            value={this.state.key}
+                            handleChange={this.handleChange}
+                            label='key'
+                            required
+                        />
+                        : null}
                     <FormInput
                         name='message'
                         type='message'

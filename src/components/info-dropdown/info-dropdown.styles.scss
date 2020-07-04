@@ -3,14 +3,13 @@
   width: 240px;
   height: 340px;
   display: flex;
-  flex-direction: column;
   padding: 20px;
-  border: 1px solid black;
+  border: none;
   background-color: coral;
   color: blue;
-  top: 80px;
+  top: 67px;
   right: 0;
-  z-index: 50;
   border-radius: 5px;
   margin-right: 50px;
+  justify-content: center;
 }
