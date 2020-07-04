@@ -3,26 +3,31 @@ import React from 'react';
 import axios from 'axios';
 
 import FormInput from "../form-input/form-input.component";
-import './custom-cipher.styles.scss'
-import CustomButton from "../custom-button/custom-button.component";
+import './cipher.styles.scss'
+import CustomButton from "../button/button.component";
 import InfoDropdown from "../info-dropdown/info-dropdown.component";
 
-class CustomCipher extends React.Component {
+const initialState = {
+    key: '',
+    message: '',
+    password: ''
+}
+
+class Cipher extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.initialState;
+        this.state = initialState;
         this.state.show = false;
     }
 
-        initialState = {
-            key: '',
-            message: '',
-            password: ''
-        }
-
     handleChange = event => {
-        this.setState({ [event.target.name]: event.target.value})
+        if(event.target.value) {
+            this.setState({[event.target.name]: event.target.value})
+        } else {
+            alert('problem z nullem')
+        }
     }
+
 
     submitCipher = event => {
         event.preventDefault()
@@ -54,9 +59,10 @@ class CustomCipher extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className='cipher-body'>
                 <form onSubmit={this.submitCipher}>
                     <FormInput
+                        // style={{'display': this.props.cipher !== 'mors' ? 'block' : 'none'}}
                         name='key'
                         type='key'
                         value={this.state.key}
@@ -72,7 +78,7 @@ class CustomCipher extends React.Component {
                         label='message'
                         required
                     />
-                    <div>
+                    <div className='button-group'>
                         <CustomButton type='submit'> ENCRYPT! </CustomButton>
                         <CustomButton onClick={this.resetAll}> RESET </CustomButton>
                         <CustomButton onClick={this.handleInfo}> INFO </CustomButton>
@@ -89,4 +95,4 @@ class CustomCipher extends React.Component {
     }
 }
 
-export default CustomCipher;
+export default Cipher;

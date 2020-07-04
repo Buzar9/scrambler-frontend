@@ -1,32 +1,20 @@
 import React from 'react';
 
 import './mors-page.styles.scss'
-import MorsCipher from "../../components/mors-cipher/mors-cipher.component";
-import {items} from "../../assets/info.data.json";
+import Cipher from "../../components/cipher/cipher.component";
+import {items} from "../../const/info.data.json";
 
+const cipher = 'mors';
+const MorsPage = () => (
 
-class MorsPage extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            cipher: 'mors'
-        };
-    }
-
-    render() {
-        const { cipher } = this.state;
-        return (
-            <div>
-                <h1> MORS </h1>
-                {items
-                    .filter((item) => item.name === cipher)
-                    .map(({ text, instruction }) =>
-                        <MorsCipher text={text} instruction={instruction} />
-                    )}
-            </div>
-        );
-    }
-}
+    <>
+        <h1> MORS </h1>
+        {items
+            .filter((item) => item.name === cipher)
+            .map(({text, instruction}) =>
+                <Cipher text={text} instruction={instruction} cipher={cipher}/>
+            )}
+    </>
+);
 
 export default MorsPage;

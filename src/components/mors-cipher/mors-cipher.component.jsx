@@ -1,6 +1,6 @@
 import React from 'react'
 import FormInput from "../form-input/form-input.component";
-import CustomButton from "../custom-button/custom-button.component";
+import CustomButton from "../button/button.component";
 import axios from 'axios'
 import InfoDropdown from "../info-dropdown/info-dropdown.component";
 
