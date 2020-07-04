@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './header.syles.scss';
-import InfoDropdown from "../info-dropdown/info-dropdown.component";
 
 const Header = () => (
     <div className='header'>

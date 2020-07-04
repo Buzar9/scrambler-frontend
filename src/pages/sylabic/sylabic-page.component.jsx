@@ -2,12 +2,11 @@ import React from 'react';
 
 import Cipher from "../../components/cipher/cipher.component";
 import {items} from '../../const/info.data.json'
-import sylabicUrl from '../../backend/url.js'
+import {SYLABIC_URL} from '../../const/endpoints.backend.js'
 
 import './sylabic-page.styles.scss'
 
 const cipher = 'sylabic';
-const url = sylabicUrl;
 const SylabicPage = () => (
 
     <div>
@@ -15,7 +14,7 @@ const SylabicPage = () => (
         {items
             .filter((item) => item.name === cipher)
             .map(({text, instruction}) =>
-                <Cipher url={url} text={text} instruction={instruction}/>
+                <Cipher url={SYLABIC_URL} text={text} instruction={instruction}/>
             )}
     </div>
 );

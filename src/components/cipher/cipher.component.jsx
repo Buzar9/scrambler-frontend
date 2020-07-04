@@ -4,30 +4,29 @@ import axios from 'axios';
 
 import FormInput from "../form-input/form-input.component";
 import './cipher.styles.scss'
-import CustomButton from "../button/button.component";
+import Button from "../button/button.component";
 import InfoDropdown from "../info-dropdown/info-dropdown.component";
 
 const initialState = {
     key: '',
     message: '',
-    password: ''
+    password: '',
+    show: false
 }
 
 class Cipher extends React.Component {
     constructor(props) {
         super(props);
         this.state = initialState;
-        this.state.show = false;
     }
 
     handleChange = event => {
-        if(event.target.value) {
+        if (event.target.value) {
             this.setState({[event.target.name]: event.target.value})
         } else {
             alert('problem z nullem')
         }
     }
-
 
     submitCipher = event => {
         event.preventDefault()
@@ -44,12 +43,13 @@ class Cipher extends React.Component {
                         password: response.data.password
                     });
                 }
-            });
+            })
+            .catch();
     };
 
     resetAll = event => {
         event.preventDefault();
-        this.setState(this.initialState);
+        this.setState(initialState);
     };
 
     handleInfo = event => {
@@ -61,8 +61,8 @@ class Cipher extends React.Component {
         return(
             <div className='cipher-body'>
                 <form onSubmit={this.submitCipher}>
+                    {this.props.cipher !== 'mors' ?
                     <FormInput
-                        // style={{'display': this.props.cipher !== 'mors' ? 'block' : 'none'}}
                         name='key'
                         type='key'
                         value={this.state.key}
@@ -70,6 +70,7 @@ class Cipher extends React.Component {
                         label='key'
                         required
                     />
+                : null}
                     <FormInput
                         name='message'
                         type='message'
@@ -79,14 +80,14 @@ class Cipher extends React.Component {
                         required
                     />
                     <div className='button-group'>
-                        <CustomButton type='submit'> ENCRYPT! </CustomButton>
-                        <CustomButton onClick={this.resetAll}> RESET </CustomButton>
-                        <CustomButton onClick={this.handleInfo}> INFO </CustomButton>
+                        <Button type='submit'> ENCRYPT! </Button>
+                        <Button onClick={this.resetAll}> RESET </Button>
+                        <Button onClick={this.handleInfo}> INFO </Button>
                     </div>
                 </form>
-                <div>
+                <>
                     <label>PASSWORD: {this.state.password}</label>
-                </div>
+                </>
                 <div style={{'display': this.state.show ? 'block' : 'none'}}>
                     <InfoDropdown show={this.state.show} text={this.props.text} instruction={this.props.instruction}/>
                 </div>
