@@ -20,7 +20,7 @@ const App = () => (
             <Route exact path='/mors' component={MorsPage}/>
             <Route exact path='/sylabic' component={SylabicPage}/>
             <Route exact path='/404' component={NotFoundPage}/>
-            <Redirect to='/404' />
+            <Redirect path={'*'} to='/404' />
         </Switch>
     </>
 )
