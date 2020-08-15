@@ -43,8 +43,9 @@ class Cipher extends React.Component {
                         password: response.data.password
                     });
                 }
-            })
-            .catch();
+            }).catch((error) => {
+                console.error('Error - ' + error);
+        });
     };
 
     resetAll = event => {
